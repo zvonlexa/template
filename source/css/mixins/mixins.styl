@@ -1,0 +1,34 @@
+@import 'nib'
+
+//Фиксирует футер к нузу
+footer_fixed(h)
+	html
+		min-width 100%
+		relative()
+	body
+		height 100%
+		margin-bottom h
+	footer
+		absolute right bottom left
+		margin auto
+		height h
+
+//Установить максимальный размер объекта
+max-size(w, h = false)
+	max-width w
+	if h 
+		max-height h
+	else
+		max-height w
+
+//Вывести box-shadow для всех браузеров
+box-shadow()
+	-webkit-box-shadow arguments
+	-moz-box-shadow arguments
+	box-shadow arguments
+
+//Вывести border-radius для всех браузеров
+border-radius()
+	-webkit-border-radius arguments
+	-moz-border-radius arguments
+	border-radius arguments
