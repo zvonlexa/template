@@ -1,7 +1,7 @@
 {
-  "name": "contacts",
+  "name": "AppleShop1",
   "version": "1.0.0",
-  "description": "Work4",
+  "description": "Work5",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

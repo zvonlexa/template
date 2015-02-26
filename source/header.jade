@@ -3,29 +3,19 @@ extend blocks/layout
 block header
 	header.header
 		.header__top
-			a(href="#").header__top-appleshop AppleShop
-				img(src="img/").header__top-appleshop-img
-			.header__contact
-				span.kod +7(921)
-				span.tel 322 12 32
+			a(href="#").header__top-appleshop.clearfix
+				img(src="img/EpplShop.png").header__top-appleshop-img
+				span.header__top-appleshop-span AppleShop
+			.header__contact.clearfix
+				.header__contact-addr
+					span.kod +7(921)
+					span.tel 322 12 32
+					a(href="email:manager@company.com").email manager@company.com
 		nav.header__nav
 			ul.header__nav-ul
-				- each n in ['Мобильный телефоны', 'Планшеты', 'Mp3 плееры', 'Персональные компьютеры', 'Ноутбуки', 'Apple TV', 'Аксессуары']
+				each n in ['Мобильный телефоны', 'Планшеты', 'Mp3 плееры', 'Персональные компьютеры', 'Ноутбуки', 'Apple TV', 'Аксессуары']
 					li.header__nav-li
-						a(href="").header__nav-a n
-				
-				//- li.header__nav-li 
-				//- 	a(href="").header__nav-a Планшеты
-				//- li.header__nav-li 
-				//- 	a(href="").header__nav-a Mp3 плееры
-				//- li.header__nav-li 
-				//- 	a(href="").header__nav-a Персональные компьютеры
-				//- li.header__nav-li 
-				//- 	a(href="").header__nav-a Ноутбуки
-				//- li.header__nav-li 
-				//- 	a(href="").header__nav-a Apple TV
-				//- li.header__nav-li 
-				//- 	a(href="").header__nav-a Аксессуары
+						a(href="").header__nav-a=n
 		.breabcrumbs
 			.breabcrumbs__list
 				span.list.selected Главная
@@ -38,22 +28,5 @@ block header
 				ul.another
 					li.another.selected 1
 					- for (var i = 2; i < 6; i++)
-						li.another i
-						li.another Все
-
-
-	//- section.content
-	//- 	.title КОНТАКТЫ
-	//- 	.nav.clearfix
-	//- 		button.append Добавить
-	//- 		.preview
-	//- 			input(type='radio' name='radio_view' id='list' checked="checked").input__list
-	//- 			label(for='list').label__list
-	//- 			input(type='radio' name='radio_view' id='plt').input__plt
-	//- 			label(for='plt').label__plt
-	//- 	.content__view
-	//- 		table.content__table
-	//- 			th
-	//- 				td 
-															
-					
+						li.another=i
+					li.another Все

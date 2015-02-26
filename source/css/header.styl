@@ -1,130 +1,64 @@
 @import 'mixins/mixins'
-:focus
-	outline none
-html
-	size 100%
-body
-	size 100%
-	margin 0
-	color #333333
-	background linear-gradient(130deg, #e2dde2, #aea2b2, #6f6b84, #e2dde2)
-.content
-	margin 90px auto
-	size 800px 440px
-	.title
-		font-size 24px
-		text-align center
-		margin-bottom 12px
-		width 100%
-	.nav
-		width 100%
-		relative()
-		margin-bottom 18px
-		.back
-			size 30px 30px
-			border none
-			background url('../img/back.png') center no-repeat
-			&:hover
-				background url('../img/back-hover.png') center no-repeat
-		.append
-			float left
-			font-size 14px
-			size 115px 34px
-			border-radius 5px
-			background-color rgba(255,255,255,.74)
-			border solid 1px #ccc
-		.preview
-			float right
-			.input__list,
-			.input__plt
-				absolute left -1000px
-				size 1px 1px
-				margin -1px
-				z-index -1000
-			.label__list
-			.label__plt
-				display(inline-block)
-				vertical-align top 
-				size 30px 30px
-				margin-left 25px
-			.label__list
-				background url('../img/list.png') center no-repeat
-				&:hover
-					background url('../img/list-hover.png') center no-repeat
-			.label__plt
-				background url('../img/plt.png') center no-repeat
-				&:hover
-					background url('../img/plt-hover.png') center no-repeat
-			.input__list:checked + .label__list,
-			.input__plt:checked + .label__plt
-				box-shadow 0px 0px 5px 2px #6f6b84
-	.content__view
-		size 800px 356px
-		border-radius 4px
-		background-color #fff
-		border solid 1px #ddd
-		.form__appdel
-			.pic__command
-				display(inline-block)
-				vertical-align top
-				size 200px 240px
-				margin 40px 0px 0px 127px
-				.userpic
-					size 200px
-					max-size 200px
-					border-radius 9px
-					margin-bottom 10px
-				.command
-					.command__submit
-						float left
-					.command__delete
-						float right
-					.command__submit
-					.command__delete
-						size 91px 30px
-						border-radius 4px
-						background-color #fff
-						border solid 1px #ccc
-			
-			.input__info
-				display(inline-block)
-				vertical-align top
-				size 270px 240px
-				margin 40px 0px 10px 100px
-				.input__info-label
-					font-size 16px
-					//margin-bottom 10px
-				.input__info-input
-					size 252px 27px
-					background-color #fff
-					box-shadow inset 0 1px 1px rgba(0,1,1,.1)
-					border solid 1px #ccc
-					border-radius 4px
-					padding-left 15px 
-					margin 10px 0px 10px 0px
-				.img__div
-					float left
-					relative()
-					size 38px 31px
-					border-radius 4px 0px 0px 4px
-					background-color #fff
-					box-shadow inset 0 1px 1px rgba(0,1,1,.15)
-					border solid 1px #ccc
-					.img
-						display(block)
-						absolute top 0 right 0 bottom 0 left 0
-						margin auto
-				.input
-					float left
-					size 213px 29px
-					border-radius 0px 4px 4px 0px
-					background-color #fff
-					box-shadow inset 0 1px 1px rgba(0,1,1,.15)
-					border solid 1px #ccc
-					padding-left 15px
-				.email
-					margin-bottom 17px
-					margin-top 9px
 
+.header
+	width 1000px
+	.header__top
+		size 100% 100px
+		.header__top-appleshop-span
+			absolute left -1000px
+		.header__top-appleshop
+			float left
+			relative()
+			size 300px 100px
+			.header__top-appleshop-img
+				display(block)
+				absolute top 0 bottom 0 left 0
+				margin auto
+		.header__contact
+			float right
+			relative()
+			.header__contact-addr
+				display(table-cell)
+				size 300px 100px
+				vertical-align middle		
+				text-align right
+				.kod
+					color blue
+				.tel
+					color aqua
+				.email
+					color red
+					display(block)
+	.header__nav
+		.header__nav-ul
+			list-style none
+			margin 0
+			padding 0
+			width 1000px
+			.header__nav-li
+				display(inline-block)
+				text-align center
+				height 40px
+				.header__nav-a
+					line-height 41px
+					font-size 18px
+					height inherit
+					relative()
+					&::before
+						display(block)
+						background-color red
+						absolute top 0
+					&::after
+						display(block)
+						background-color blue
+						absolute bottom 0
+
+
+					// display(table-cell)
+					// height inherit
+					// vertical-align middle
 .clearfix
 	clearfix()
+
+
+		
