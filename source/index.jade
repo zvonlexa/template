@@ -1,0 +1,61 @@
+doctype html
+
+html(lang="ru")
+	body
+		include blocks/layout
+		include blocks/header
+
+		section.content
+			nav.content__nav.clearfix
+				ul.content__nav-main
+					each n in ['iPhone', 'iPad', 'iMac', 'Macbook', 'iPod', 'Другие']
+						if (n === 'iPhone')
+							li.content__nav-main-li
+								span.content__nav-span=n
+								ul.content__nav-pop
+									each m in ['iPhone 4s', 'iPhone5', 'iPhone5 с экслюзивным дизайнером', 'iPhone6', 'iPhone6 plus']
+										- m = '> ' + m
+										li.content__nav-pop-li
+											span.content__nav-span=m
+						else
+							li.content__nav-main-li
+								span.content__nav-span=n
+			asid.content__product.clearfix
+				ul.content__product-ul
+					each desc, indx in ['Apple Thunderbolt Display 27', 'Apple iMac 27' , 'iPad Air Wi-Fi 128Gb - Silver', 'iPad Air Wi-Fi 128Gb - Silver', 'Apple iPod nano 7G 16 Gb blue', 'Роутер Wi-Fi Apple AirPort']
+						li.content__product-li
+							.content__product-left.clearfix
+								img(src="img/pr#{indx}.png").content__product-img
+							.content__product-right.clearfix
+								a(href="#").content__product-a=desc
+								p.content__product-p Артикул: 42787825, Опция: включена, Цвет: серебристый, Размер: 1280*1245*90, Вес: 9 кг
+				.content__view
+						select.header__view-select.clearfix
+							option.header__view-option.selected Сеткой
+							option.header__view-option Линиями
+						ul.another-ul.clearfix
+							li.another-li.selected 1
+							- for (var i = 2; i < 6; i++)
+								li.another-li=i
+							li.another-li Все
+				.description_shop
+					h2.description_shop-head Пару слов о магазине
+					p.description_shop-p
+						|Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+						|Aenean euismod bibendum laoreet. 
+						|Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. 
+						|Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient 
+						|montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, 
+						|felis tellus mollis orci, sed rhoncus sapien nunc eget odio. 
+						|Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum 
+						|laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. 
+						|Proin sodales pulvinar tempor.
+						|Cum sociis natoque penatibus et magnis dis parturient montes, 
+						|nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus 
+						|mollis orci, sed rhoncus sapien nunc eget odio.Lorem ipsum dolor sit amet, consectetur 
+						|adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus 
+						|accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque 
+						|penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, 
+						|nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc 
+						|eget odio.
+		include blocks/footer

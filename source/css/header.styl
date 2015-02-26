@@ -36,29 +36,43 @@
 			padding 0
 			width 1000px
 			.header__nav-li
-				display(inline-block)
-				text-align center
-				height 40px
+				arrow(35deg, 40px, #f7f7f7)
 				.header__nav-a
-					line-height 41px
-					font-size 18px
-					height inherit
+					display(table-cell)
+					color #5c7b98
+					height 40px
+					vertical-align middle
 					relative()
-					&::before
-						display(block)
-						background-color red
-						absolute top 0
-					&::after
-						display(block)
-						background-color blue
-						absolute bottom 0
-
-
-					// display(table-cell)
-					// height inherit
-					// vertical-align middle
+					z-index 10
+					text-decoration none
+			.header__nav-li:hover
+				arrow(35deg, 40px, #dcf6e0)
+			.header__nav-li-active
+				arrow(35deg, 40px, #00b9fe)
+				.header__nav-a
+					display(table-cell)
+					color #fff
+					height 40px
+					vertical-align middle
+					relative()
+					z-index 10
+					text-decoration none
+	.breabcrumbs
+		height 66px
+		.breabcrumbs__list
+			float left
+			.list
+				display(inline-block)
+		.header__view
+			float right
+			.header__view-select
+				display(inline-block)
+			.another-ul
+				display(inline-block)
+				list-style none
+				.another-li
+					display(inline-block)
 .clearfix
 	clearfix()
-
 
 		

@@ -1,0 +1,46 @@
+@import 'mixins/mixins'
+
+.content
+	.content__nav
+		float left
+		width 230px
+		.content__nav-main
+		.content__nav-pop
+			list-style none
+			margin 0
+			padding 0
+		.content__nav-span
+			display(block)
+			width 230px
+			background-color #dce6f0
+			font-size 15px
+			line-height 17px
+	.content__product
+		width 740px
+		float left
+		.content__product-ul
+			list-style none
+			.content__product-li
+				height 160px
+				.content__product-left
+					float left
+					size 150px 130px
+					relative()
+					.content__product-img
+						absolute top 0 right 0 bottom 0 left 0
+						margin auto
+						size 90%
+				.content__product-right
+					float right
+					size 475px 130px
+
+		.content__view
+			height 26px
+			.header__view-select
+				float left
+			.another-ul
+				float right
+				list-style none
+				.another-li
+					display(inline-block)
+

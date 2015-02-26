@@ -1,0 +1,39 @@
+footer.footer
+	.footer__main
+		ul.footer__main-g
+			li.footer__main-logo
+				img(src="img/logowhite.png").img
+			li.footer__menu-v
+				ul.footer__menu-ul
+					each menu, idx in ['О магазине', 'О нас', 'Наши цены', 'Наши скидки', 'Акции']
+						if (idx === 0)
+							li.footer__menu-li-header=menu
+						else
+							li.footer__menu-li=menu
+			li.footer__menu-v
+				ul.footer__menu-ul
+					each menu, idx in ['Каталог', 'Смартфоны', 'Планшеты', 'Компьютеры', 'Акссесуары']
+						if (idx === 0)
+							li.footer__menu-li-header=menu
+						else
+							li.footer__menu-li=menu
+			li.footer__menu-v
+				ul.footer__menu-ul
+					each menu, idx in ['Контакты', 'Телефоны', 'Адреса', 'Карта проезда', 'Обратная связь']
+						if (idx === 0)
+							li.footer__menu-li-header=menu
+						else
+							li.footer__menu-li=menu
+			li.footer__social
+				.footer__social-images
+					a(href="#")
+						img(src="img/").footer__social-AppStore
+					a(href="#")
+						img(src="img/").footer__social-GooglePlay
+				.footer__social-icon
+					a(href="#")
+						img(src="img/").footer__icon-b
+					a(href="#")
+						img(src="img/").footer__icon-f
+					a(href="#")
+						img(src="img/").footer__icon-w
