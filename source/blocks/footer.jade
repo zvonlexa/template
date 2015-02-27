@@ -2,7 +2,7 @@ footer.footer
 	.footer__main
 		ul.footer__main-g
 			li.footer__main-logo
-				img(src="img/logowhite.png").img
+				img(src="img/footlogo.png").img
 			li.footer__menu-v
 				ul.footer__menu-ul
 					each menu, idx in ['О магазине', 'О нас', 'Наши цены', 'Наши скидки', 'Акции']
@@ -25,15 +25,11 @@ footer.footer
 						else
 							li.footer__menu-li=menu
 			li.footer__social
-				.footer__social-images
-					a(href="#")
-						img(src="img/").footer__social-AppStore
-					a(href="#")
-						img(src="img/").footer__social-GooglePlay
-				.footer__social-icon
-					a(href="#")
-						img(src="img/").footer__icon-b
-					a(href="#")
-						img(src="img/").footer__icon-f
-					a(href="#")
-						img(src="img/").footer__icon-w
+				.footer__social-div
+					.footer__social-images
+						a(href="#").footer__social-AppStore.clearfix
+						a(href="#").footer__social-GooglePlay.clearfix
+					.footer__social-icon
+						a(href="#").footer__icon-b.clearfix
+						a(href="#").footer__icon-f.clearfix
+						a(href="#").footer__icon-w.clearfix

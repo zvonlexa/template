@@ -1,0 +1,76 @@
+@import 'mixins/mixins'
+
+.footer
+	width 100%
+	background-color #613993
+	background-image url('../img/footer-fon.png')
+.footer__main
+	size 1000px 240px
+	margin auto
+	&::before
+		content ""
+		display(inline-block)
+		height 100%
+		width 0px
+		vertical-align middle
+.footer__main-g
+	display(inline-block)
+	vertical-align middle
+	list-style none
+	margin 0
+	padding 0
+	height 100px
+.footer__main-logo
+	display(inline-block)
+	vertical-align top
+	size 160px 100%
+	relative()
+	.img
+		display(block)
+		absolute top 0 bottom 0
+		margin auto
+.footer__menu-v
+	display(inline-block)
+	vertical-align top
+.footer__menu-ul
+	list-style none
+	margin 0
+	padding 0
+.footer__menu-li-header
+	font-size 24px
+.footer__menu-li
+	font-size 16px
+.footer__social
+	display(inline-block)
+	height inherit
+.footer__social-images
+	size 185px 35px
+	overflow hidden
+.footer__social-AppStore
+	float left
+	background url('../img/itunes-shop.png') no-repeat
+.footer__social-GooglePlay
+	float right
+	background url('../img/googleplay-shop.png') no-repeat
+.footer__social-AppStore
+.footer__social-GooglePlay
+	size 90px 32px
+.footer__social-div
+	display(table-cell)
+	vertical-align middle
+	height inherit
+.footer__social-icon
+	size 185px 35px
+	overflow hidden
+.footer__icon-b
+.footer__icon-f
+.footer__icon-w
+	float left
+	background url('../img/social-icons.png') no-repeat
+	size 43px
+.footer__icon-b
+	background-position 0
+.footer__icon-f
+	background-position -52px 0
+.footer__icon-w
+	background-position -104px 0
