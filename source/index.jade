@@ -4,5 +4,57 @@ html(lang="ru")
 	include blocks/layout
 	body
 		include blocks/header
-		
+		.content
+			asid.content__message.clearfix
+				h2.content__message-head Welcome message!
+					p.content__message-p
+						|Real Estate is one of free website templates created by 
+						|TemplateMonster.com team. This website
+						|template is optimized for 1280X1024 screen resolution. It is also 
+						|XHTML & CSS valid. 
+					p.content__message-p
+						|This Real Estate Template goes with 2 packages – 
+						|with PSD source files and without them. PSD source files are 
+						|available for free for the registered members of TemplateMonster.com. 
+						|The basic package (without PSD source) is available for anyone 
+						|without registration.
+				.content__line
+				.content__buysell
+					h2.content__buysell-head Buyers,Sellers,Proprietors,Agents.
+					ul.content__buysell-info
+						each bs, idx in ['Selling', 'Investing', 'Renting']
+							li.content__buysell-more
+								img(src='img/bs#{idx + 1}.png').content__buysell-img
+								h3.content__buysell-h3 #{bs}
+								p.content__buysell-p
+									|Nam liber tempor cum soluta no eleifend option 
+									|congue nihil imperdiet doming iquod mazim placerat.
+								button.content__buysell-button More
+			section.content__find.clearfix
+				form(method='POST' action)
+					.content__find-form
+						h2.content__find-head Find you home
+						label.content__find-label Home type
+							select(placheholder='Homes for sale').content__find-selectType
+						label.content__find-label
+							input(type='text' placheholder='Address, City, Zip').content__find-inputAddress
+						.content__find-bb
+							label.content__find-bads
+								select.content__find-selectBads
+							label.content__find-baths
+								select.content__find-selectBaths
+						input(type='submit' value='Search').content__find-submit
+				.content__office
+					h2.content__office-h Find our office
+					img(src='img/map.png').content__office-img
+					ul.content__office-ulg
+						li.content__office-lig
+							ul.content__office-ul
+								each ofc in ['Asia', 'Australia', 'Africa']
+									li.content__office-li ofc
+						li.content__office-lig
+							ul.content__office-ul
+								each ofc in ['North America', 'Europe', 'Latin America']
+									li.content__office-li ofc			
+
 		//-include blocks/footer
