@@ -1,0 +1,8 @@
+modules/plugins
+node_modules/
+public/
+source/img
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+*.log
