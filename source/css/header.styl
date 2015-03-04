@@ -1,102 +1,88 @@
 @import 'mixins/mixins'
 
-body 
-	font-family elektra_light_pro
+//body 
+//	font-family elektra_light_pro
 
+
+.bx-wrapper
+	.bx-viewport
+		left 0
+		box-shadow none
+		border none
+		transform none
 .header
-	width 100%
-	background url('../img/header.png') repeat-x
-	.header__main
-		width 1000px
-		margin auto
-		.header__top
-			size 100% 100px
-			.header__top-appleshop-span
-				absolute left -1000px
-			.header__top-appleshop
-				float left
-				relative()
-				size 300px 100px
-				.header__top-appleshop-img
-					display(block)
-					absolute top 0 bottom 0 left 0
-					margin auto
-			.header__contact
-				float right
-				relative()
-				.header__contact-addr
-					display(table-cell)
-					size 300px 100px
-					vertical-align middle		
-					text-align right
-					.kod
-						color #00b9fe
-						font-size 15px
-						letter-spacing 2px
-						vertical-align top
-					.tel
-						color #5c7b98
-						font-size 25px
-					.email
-						display(block)
-						font-size 17px
-						color #613993
-						line-height 25px
-					.akod
-					.email
-						text-decoration none
-		.header__nav
-			.header__nav-ul
-				list-style none
-				margin 0
-				padding 0
-				font-size 0
-				width 1000px
-				.header__nav-li
-					arrow(35deg, 40px, #f7f7f7, true)
-					padding-left 5px
-					.header__nav-a
-						display(table-cell)
-						font-size 15px
-						color #5c7b98
-						height 40px
-						vertical-align middle
-						relative()
-						z-index 10
-						text-decoration none
-						padding-left 5px
-				.header__nav-li:hover
-					arrow(35deg, 40px, #dcf6e0, true)
-					padding-left 5px
-				.header__nav-li-active
-					arrow(35deg, 40px, #00b9fe, false)
-					padding-left 5px
-					.header__nav-a
-						display(table-cell)
-						font-size 15px
-						color #fff
-						height 40px
-						vertical-align middle
-						relative()
-						z-index 10
-						text-decoration none
-						padding-left 5px
-		.breabcrumbs
-			height 66px
-			.breabcrumbs__list
-				float left
-				.list
-					display(inline-block)
-			.header__view
-				float right
-				.header__view-select
-					display(inline-block)
-					-webkit-appearance none
-				.another-ul
-					display(inline-block)
-					list-style none
-					.another-li
-						display(inline-block)
+	font-family vegur
+.header__main
+	relative()
+	width 1200px
+.header__slider
+	size 1200px 640px
+.header__slider-ul
+	list-style none
+	padding 0
+	margin 0
+	font-size 0
+.header__slider-li
+	size 1200px 640px
+//.header__slider-img
+	//size 1200px 640px
+.header__logo
+	absolute top 0 left 160px
+	z-index 10
+.header__logo-a
+	text-decoration none
+.header__logo-real
+.header__logo-estate
+	font-size 64px
+	line-height 66px
+	font-weight bold
+.header__logo-real
+	color #2098f5
+.header__logo-estate
+	color #fff
+.header__folow
+	width 1200px
+	height 65px
+	background-color #272727
+	overflow hidden
+	absolute top 0 right 0 left 0
+	opacity 0.8
+.header__folow-right
+	absolute right 0 bottom 0
+	width 250px
+.header__folow-span
+	color #fff
+	font-size 24px
+	line-height 26px
+.header__folow-img
+	display(inline-block)
+	max-size 23px
+	margin-left 6%
+.header__nav
+	absolute right 0 bottom 0 left 0
+	width 1200px
+.header__nav-ul
+	width 1000px
+	margin auto
+	list-style none
+	padding 0
+	background-color #272727
+	opacity 0.8
+.header__nav-li
+	display(inline-block)
+	vertical-align middle
+	text-align center
+	margin-left 6%
+.header__nav-li:hover
+	background-color #2098f5
+.header__nav-a
+	display(table-cell)
+	vertical-align middle
+	color #fff
+	text-decoration none
+	height 70px
+	font-size 28px
+	font-weight bold
 .clearfix
 	clearfix()
 
