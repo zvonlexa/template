@@ -1,7 +1,7 @@
 {
-  "name": "contacts",
+  "name": "RealEstable",
   "version": "1.0.0",
-  "description": "Work4",
+  "description": "For portfolio",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,15 +9,7 @@
   "author": "Zvonarev A",
   "license": "ISC",
   "dependencies": {
-    "gulp": "^3.8.11",
-    "gulp-include": "^1.1.1",
-    "gulp-jade": "^1.0.0",
-    "gulp-plumber": "^0.6.6",
-    "gulp-stylus": "^2.0.0",
-    "gulp-uglify": "^1.1.0",
-    "nib": "^1.1.0"
   },
   "devDependencies": {
-    "gulp-concat-css": "^2.1.0"
   }
 }

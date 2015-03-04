@@ -32,3 +32,26 @@ border-radius()
 	-webkit-border-radius arguments
 	-moz-border-radius arguments
 	border-radius arguments
+
+//Делаем фон типа >----> 
+// d - угол поворота, h - высота, с - цвет фона s - тень
+arrow(d, h, c, s)
+	display(inline-block)
+	relative()
+	text-align center
+	&::before
+		content ""
+		display(block)
+		absolute top 0
+		size 100% (h / 2)
+		background-color c
+		transform skewX(d)
+		box-shadow -2px 2px 2px 0 rgba(0,0,0,0.3) if s
+	&::after
+		content ""
+		display(block)
+		absolute bottom 0
+		size 100% (h / 2)
+		background-color c
+		transform skewX((0 - d))
+		box-shadow 1px 2px 2px 0 rgba(0,0,0,0.3) if s
