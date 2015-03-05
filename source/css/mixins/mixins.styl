@@ -1,5 +1,17 @@
 @import 'nib'
 
+//Фиксирует футер к нузу без централизации
+footer_fixed_nocentr(h)
+	html
+		min-width 100%
+		relative()
+	body
+		height 100%
+		margin-bottom h
+	footer
+		absolute bottom 0
+		height h
+
 //Фиксирует футер к нузу
 footer_fixed(h)
 	html

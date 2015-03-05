@@ -7,17 +7,17 @@ html(lang="ru")
 		.content
 			asid.content__message.clearfix
 				h2.content__message-head Welcome message!
-					p.content__message-p
-						|Real Estate is one of free website templates created by 
-						|TemplateMonster.com team. This website
-						|template is optimized for 1280X1024 screen resolution. It is also 
-						|XHTML & CSS valid. 
-					p.content__message-p
-						|This Real Estate Template goes with 2 packages – 
-						|with PSD source files and without them. PSD source files are 
-						|available for free for the registered members of TemplateMonster.com. 
-						|The basic package (without PSD source) is available for anyone 
-						|without registration.
+				p.content__message-p
+					|Real Estate is one of free website templates created by 
+					|TemplateMonster.com team. This website
+					|template is optimized for 1280X1024 screen resolution. It is also 
+					|XHTML & CSS valid. 
+				p.content__message-p
+					|This Real Estate Template goes with 2 packages – 
+					|with PSD source files and without them. PSD source files are 
+					|available for free for the registered members of TemplateMonster.com. 
+					|The basic package (without PSD source) is available for anyone 
+					|without registration.
 				.content__line
 				.content__buysell
 					h2.content__buysell-head Buyers,Sellers,Proprietors,Agents.
@@ -35,26 +35,31 @@ html(lang="ru")
 					.content__find-form
 						h2.content__find-head Find you home
 						label.content__find-label Home type
-							select(placheholder='Homes for sale').content__find-selectType
-						label.content__find-label
-							input(type='text' placheholder='Address, City, Zip').content__find-inputAddress
+							select.content__find-selectType
+								option(value='1') Homes for sale
+						label.content__find-label Location
+							input(type='text' placeholder='Address, City, Zip').content__find-inputAddress
 						.content__find-bb
-							label.content__find-bads
-								select.content__find-selectBads
-							label.content__find-baths
-								select.content__find-selectBaths
+							.content__find-lb.clearfix
+								label.content__find-label-b Beds
+									select.content__find-select-b
+										option(value='1')
+							.content__find-rb.clearfix
+								label.content__find-label-b Baths
+									select.content__find-select-b
+										option(value='1')
 						input(type='submit' value='Search').content__find-submit
 				.content__office
 					h2.content__office-h Find our office
-					img(src='img/map.png').content__office-img
+					img(src='img/map-270X103.png').content__office-img
 					ul.content__office-ulg
 						li.content__office-lig
-							ul.content__office-ul
+							ul.content__office-ul-l
 								each ofc in ['Asia', 'Australia', 'Africa']
-									li.content__office-li ofc
+									li.content__office-li #{ofc}
 						li.content__office-lig
-							ul.content__office-ul
+							ul.content__office-ul-r
 								each ofc in ['North America', 'Europe', 'Latin America']
-									li.content__office-li ofc			
+									li.content__office-li #{ofc}
 
-		//-include blocks/footer
+		include blocks/footer

@@ -1,55 +1,75 @@
 @import 'mixins/mixins'
 :focus
 	outline none
-
+footer_fixed_nocentr(125px)
 body 
 	font-family vegur
+	font-weight normal
 	background-color #272727
-	width 1200px
+	width 1262px
 .content
 	width 940px
 	margin auto
 	overflow hidden
+	margin-bottom 78px
 .content__message
 	float left
 	width 620px
 .content__message-head
 .content__find-head
 .content__buysell-head
+.content__office-h
 	color #fff
 	font-size 36px
-	line-height 38px
+	line-height 20px
 .content__message-p
 	color #939393
 	font-size 14px
-	line-height 16px
+	line-height 25px
 .content__line
 	width 100%
 	height 0px
 	border-bottom 1px dashed #3d3d3d
+	margin-top 21px
+	margin-bottom 44px
 .content__buysell-info
 	list-style none
 	padding 0
-	margin 0
+	margin 0px 0px 0px -39px
 	font-size 0
 .content__buysell-more
 	display(inline-block)
 	width 180px
+	margin-left 39px
 .content__buysell-h3
 	color #fff
 	font-size 24px
-	line-height 26px
+	line-height 13px
+	margin-bottom 15px
 .content__buysell-p
 	color #939393
 	font-family Arial
 	font-size 14px
-	line-height 16px
+	line-height 19px
+	margin-bottom 20px
+.content__buysell-img
+	size 170px 90px
+	border 5px solid #fff
 .content__buysell-button
+	color #fff
+	font-size 20px
+	line-height 22px
 	size 88px 34px
 	background-color #2098f5
+	text-align center
+	border none
 .content__find
 	float right
 	width 270px
+.content__find-form
+	margin-bottom 55px
+.content__find-head
+	margin-bottom 16px
 .content__find-label
 	color #939393
 	font-family Arial
@@ -59,4 +79,72 @@ body
 	color #939393
 	font-family Arial
 	font-size 14px
-	line-height 16px	
+	line-height 16px
+.content__find-label
+.content__find-inputAddress
+.content__find-selectType
+	size 270px 35px
+.content__find-label-b
+.content__find-select-b
+.content__find-submit
+.content__find-lb
+.content__find-rb
+	size 126px 35px
+.content__find-submit
+	color #fff
+	background-color #2098f5
+	font-size 20px
+	line-height 22px
+	text-align center
+	border none
+.content__find-label-b
+.content__find-label
+.content__find-inputAddress
+.content__find-selectType
+.content__find-select-b
+	color #939393
+	font-family Arial
+	font-size 14px
+	margin-bottom 4px
+.content__find-label-b
+.content__find-label
+	line-height 37px
+.content__find-inputAddress
+.content__find-selectType
+.content__find-select-b
+	line-height 16px
+	background-color #000
+	-webkit-appearance none
+	border none
+	padding-left 10px
+.content__find-lb
+	float left
+.content__find-rb
+	float right
+.content__find-bb
+	//overflow hidden
+	size 270px 100px
+.content__find-selectType
+	background #000 250px no-repeat url('../img/arrow-7X4.png')
+.content__find-select-b
+	background #000 103px no-repeat url('../img/arrow-7X4.png')
+//.content__find-inputAddress input::-webkit-input-placeholder
+//	color #fff
+.content__office-ulg
+	list-style none
+	margin 0
+	padding 0
+.content__office-lig
+	display(inline-block)
+.content__office-ul-l
+.content__office-ul-r
+	list-style-image url('../img/arrow-4X7.png')
+.content__office-ul-l
+	padding-left 0
+.content__office-ul-r
+	padding-left 80px
+.content__office-li
+	font-family Arial
+	font-size 14px
+	line-height 24px
+	color #fff
