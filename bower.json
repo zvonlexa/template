@@ -12,7 +12,6 @@
     "**/.*",
     "node_modules",
     "bower_components",
-    "modules/plugins",
     "test",
     "tests"
   ],
