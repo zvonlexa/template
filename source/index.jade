@@ -1,60 +1,56 @@
-doctype html
+extend blocks/layout
 
-html(lang="ru")
-	include blocks/layout
-	body
-		include blocks/header
-		section.content
-			nav.content__nav.clearfix
-				ul.content__nav-main
-					each n in ['iPhone', 'iPad', 'iMac', 'Macbook', 'iPod', 'Другие']
-						if (n === 'iPhone')
-							li.content__nav-main-li
-								span.content__nav-span=n
-								ul.content__nav-pop
-									each m in ['iPhone 4s', 'iPhone5', 'iPhone5 с экслюзивным дизайнером', 'iPhone6', 'iPhone6 plus']
-										- m = '> ' + m
-										li.content__nav-pop-li
-											span.content__nav-span=m
-						else
-							li.content__nav-main-li
-								span.content__nav-span=n
-			asid.content__product.clearfix
-				ul.content__product-ul
-					each desc, indx in ['Apple Thunderbolt Display 27', 'Apple iMac 27' , 'iPad Air Wi-Fi 128Gb - Silver', 'iPad Air Wi-Fi 128Gb - Silver', 'Apple iPod nano 7G 16 Gb blue', 'Роутер Wi-Fi Apple AirPort']
-						li.content__product-li
-							.content__product-left.clearfix
-								img(src="img/pr#{indx}.png").content__product-img
-							.content__product-right.clearfix
-								a(href="#").content__product-a=desc
-								p.content__product-p Артикул: 42787825, Опция: включена, Цвет: серебристый, Размер: 1280*1245*90, Вес: 9 кг
-				.content__view
-						select.header__view-select.clearfix
-							option.header__view-option.selected Сеткой
-							option.header__view-option Линиями
-						ul.another-ul.clearfix
-							li.another-li.selected 1
-							- for (var i = 2; i < 6; i++)
-								li.another-li=i
-							li.another-li Все
-				.description_shop
-					h2.description_shop-head Пару слов о магазине
-					p.description_shop-p
-						|Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-						|Aenean euismod bibendum laoreet. 
-						|Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. 
-						|Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient 
-						|montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, 
-						|felis tellus mollis orci, sed rhoncus sapien nunc eget odio. 
-						|Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum 
-						|laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. 
-						|Proin sodales pulvinar tempor.
-						|Cum sociis natoque penatibus et magnis dis parturient montes, 
-						|nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus 
-						|mollis orci, sed rhoncus sapien nunc eget odio.Lorem ipsum dolor sit amet, consectetur 
-						|adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus 
-						|accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque 
-						|penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, 
-						|nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc 
-						|eget odio.
-		include blocks/footer
+block content
+	.content
+		.content__header
+			span.content__header-logo Портфолио
+			button.content__header-nav-button.active Обо мне
+			button.content__header-nav-button Портфолио
+			button.content__header-nav-button Связаться
+		.content__about
+			h2.content__about-head Обо мне
+			p.content__about-p
+				|Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae congue sem. 
+				|Etiam non nisl ut ligula facilisis cursus quis sed eros. Praesent non augue 
+				|ultricies turpis posuere dignissim ac non velit. Sed eget mauris purus, elementum 
+				|aliquet erat. Suspendisse aliquam commodo nisl vel fringilla. Sed tempus neque 
+				|pretium velit lacinia in ultrices felis sagittis. Vivamus nisi nisi, aliquam et 
+				|fringilla semper, iaculis vel velit. Vestibulum pretium nibh a sapien sodales 
+				|condimentum. Phasellus semper placerat arcu, a lobortis tellus consectetur a. 
+				|Nam faucibus laoreet elit, commodo euismod mi consectetur at. 
+			ul.content__about-ul
+				li.content__about-li
+					a(href='#').content__about-a
+						span.content__about-span Follow me on Twitter!
+						img(src='img/tw.png').content__about-img
+				li.content__about-li
+					a(href='#').content__about-a
+						span.content__about-span Find me on Facebook!
+						img(src='img/face.png').content__about-img
+				li.content__about-li
+					a(href='#').content__about-a
+						span.content__about-span See My Photos on Picasa!
+						img(src='img/photos.png').content__about-img
+		.content__devider-1
+		.content__portfolio
+			.content__portfolio-images
+		.content__devider-2
+		.content__contact
+			.content__contact-ps
+				p.content__contact-p
+				|Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae congue sem. 
+				|Etiam non nisl ut ligula facilisis cursus quis sed eros. Praesent non augue 
+				|ultricies turpis posuere dignissim ac non velit. Sed eget mauris purus, elementum 
+				|aliquet erat. Suspendisse aliquam commodo nisl vel fringilla. Sed tempus neque 
+				|pretium velit lacinia in ultrices felis sagittis. Vivamus nisi nisi, aliquam et 
+				|fringilla semper, iaculis vel velit. Vestibulum pretium nibh a sapien sodales 
+				|condimentum. Phasellus semper placerat arcu, a lobortis tellus consectetur a. 
+				|Nam faucibus laoreet elit, commodo euismod mi consectetur at. 
+				img(src='img/kauk.png').content__contact-img
+			.content__contact-form
+				form(method='POST').contact
+					label.content__contact-label Как вас зовут?
+						input(type='text').content__contact-input
+					label.content__contact-label Вам e-mail?
+						input(type='email')
+					label.content__contact-label Коротко о 

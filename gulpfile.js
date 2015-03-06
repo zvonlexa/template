@@ -75,7 +75,7 @@ gulp.task('stylus', function() {
 		.pipe(plumber())
 		.pipe(stylus({use:[nib()]}))
 		.pipe(concatCss('main.css'))
-		.pipe(minifyCss({keepBreaks:true}))
+//		.pipe(minifyCss({keepBreaks:true}))
 		.pipe(gulp.dest(path.css.destination));
 });
 

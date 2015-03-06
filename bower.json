@@ -1,8 +1,8 @@
 {
-  "name": "nameProject",
+  "name": "Portfolio",
   "version": "1.0.0",
   "authors": [
-    "Zvon Lexa <zvon@hotbox.ru>"
+    "Zvon Lexa <zvon.lexa@yandex.ru>"
   ],
   "moduleType": [
     "node"
